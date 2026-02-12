@@ -393,6 +393,37 @@ Total Supply (Dry Prod + Imports) = Total Demand (Consumption + Exports) + Net S
 | EIA DPR | Basin production | `eia.gov/petroleum/drilling/xls/dpr-data.xlsx` | Monthly |
 | NRC | Reactor status | `nrc.gov/reading-rm/doc-collections/event-status/reactor-status/` | Daily |
 
+### Premium Data Sources (Optional Upgrades)
+
+Subscribers with access to paid data services can substitute or supplement the free sources above. When a user mentions they have access to any of these, use them instead of (or alongside) the free equivalents.
+
+**S&P Global Commodity Insights (formerly Platts)**
+- **Platts Gas Daily**: Intraday and day-ahead pricing at 100+ US/Canada hub locations — replaces EIA HH spot (RNGWHHD) with real-time, location-specific pricing
+- **Platts M2MS (Market-to-Market Service)**: End-of-day NYMEX NG settlements + basis swaps — replaces CME settlement scraping for P8/P9/P10
+- **Key assessments**: GD HH (Henry Hub), GD Waha, GD SoCal, GD Chicago, GD Transco Z6 NY
+- **Delivery format**: Platts Excel add-in, API (via S&P Global Marketplace), or CSV download
+- **Products enhanced**: P8 (spot/basis by location), P9 (real-time settlements), P10 (multi-hub risk)
+
+**Bentek Energy (S&P Global)**
+- **Pipeline flow data**: Real-time and daily measured pipeline nominations and flows — direct production estimates without waiting for EIA monthly data
+- **Power Burn Tracker**: Daily gas-fired generation estimates — replaces EIA monthly consumption (2-month lag) with near-real-time data for P3
+- **Supply/Demand Balance**: Bentek's own daily S/D model — cross-validation for P5 balance sheet
+- **Storage Tracker**: Survey-based weekly storage estimates (pre-EIA Thursday release) — early read for P1
+- **LNG Feed Gas**: Daily LNG terminal feedgas volumes — real-time export data for P5
+- **Products enhanced**: P3 (daily gas burn), P4 (daily production flows), P5 (daily S/D + LNG), P1 (pre-release storage)
+
+**Genscape (Wood Mackenzie / Verisk)**
+- **Pipeline Monitor**: Physical pipeline flow measurements via proprietary sensors — independent production/flow verification
+- **Power Generation Monitor**: Real-time plant-level generation data — enhances P3 and P7 with hourly resolution
+- **Storage Monitor**: Proprietary satellite/infrared storage estimates — independent P1 validation before EIA release
+- **Products enhanced**: P1 (storage estimates), P3 (real-time gen), P4 (flow-based production), P7 (plant-level nuclear)
+
+**Substitution Rules**:
+- Premium data replaces the free equivalent in the same column position — column order never changes
+- If premium data has higher frequency (daily vs monthly), aggregate to match the template's time grain
+- Always note the data source in the update summary (e.g., "Source: Platts GD HH" vs "Source: EIA RNGWHHD")
+- Free sources remain the fallback if premium access is unavailable for a given update
+
 ---
 
 ## 7. Update Schedule

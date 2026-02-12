@@ -42,8 +42,8 @@ Use the EIA API v2:
 
 | Column | Measure | Series ID |
 |--------|---------|-----------|
-| C | US Marketed Production | NG.N9050US2.M |
-| D | US Dry Production | NG.N9070US2.M |
+| C | US Marketed Production | N9050US2 |
+| D | US Dry Production | N9070US2 |
 
 **API endpoint:**
 ```
@@ -82,20 +82,20 @@ DPR data is reported as **Mcf/d** (thousand cubic feet per day). Use the values 
 
 ### D. State-Level Marketed Production (10 states)
 
-Use the EIA API v2 for each state. The series ID format is `NG.N9050{XX}2.M` where `{XX}` is the state code:
+Use the EIA API v2 for each state. The series ID format is `N9050{XX}2` where `{XX}` is the state code:
 
 | Column | State | Series ID |
 |--------|-------|-----------|
-| M | Texas | NG.N9050TX2.M |
-| N | Pennsylvania | NG.N9050PA2.M |
-| O | Louisiana | NG.N9050LA2.M |
-| P | New Mexico | NG.N9050NM2.M |
-| Q | West Virginia | NG.N9050WV2.M |
-| R | Oklahoma | NG.N9050OK2.M |
-| S | Colorado | NG.N9050CO2.M |
-| T | Wyoming | NG.N9050WY2.M |
-| U | Ohio | NG.N9050OH2.M |
-| V | North Dakota | NG.N9050ND2.M |
+| M | Texas | N9050TX2 |
+| N | Pennsylvania | N9050PA2 |
+| O | Louisiana | N9050LA2 |
+| P | New Mexico | N9050NM2 |
+| Q | West Virginia | N9050WV2 |
+| R | Oklahoma | N9050OK2 |
+| S | Colorado | N9050CO2 |
+| T | Wyoming | N9050WY2 |
+| U | Ohio | N9050OH2 |
+| V | North Dakota | N9050ND2 |
 
 **API endpoint for each state:**
 ```
